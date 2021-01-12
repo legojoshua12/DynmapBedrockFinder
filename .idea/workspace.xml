@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5d3494d-ccb4-40ea-ae3d-7bd09d1638a2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/bedrock.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fetchTiles.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/locateBedrockInTile.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/locateBedrockInTile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stitchtiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/stitchtiles.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,47 +107,55 @@
       <option name="project" value="LOCAL" />
       <updated>1610407170562</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Multi column work done and correct image stitching is made throughout the final result, correctly locating the bedrock">
+      <created>1610411998145</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610411998145</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added a stitching script that will be the basis for combining together all the tiles into one image for searching on" />
     <MESSAGE value="Refactored code into correct order stitching into columns using length of config file, as well as added a new time elapse function for monitoring length of calculation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored code into correct order stitching into columns using length of config file, as well as added a new time elapse function for monitoring length of calculation" />
+    <MESSAGE value="Multi column work done and correct image stitching is made throughout the final result, correctly locating the bedrock" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multi column work done and correct image stitching is made throughout the final result, correctly locating the bedrock" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610393017999">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1610393017999" />
-    <state x="612" y="49" key="CommitChangelistDialog2" timestamp="1610407170203">
+    <state x="430" y="49" key="CommitChangelistDialog2" timestamp="1610411997770">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="612" y="49" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1610407170203" />
-    <state width="1899" height="272" key="GridCell.Tab.0.bottom" timestamp="1610411862278">
+    <state x="430" y="49" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1610411997770" />
+    <state width="1899" height="272" key="GridCell.Tab.0.bottom" timestamp="1610419058455">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610411862278" />
-    <state width="1899" height="272" key="GridCell.Tab.0.center" timestamp="1610411862278">
+    <state width="1899" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610419058455" />
+    <state width="1899" height="272" key="GridCell.Tab.0.center" timestamp="1610419058455">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="272" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610411862278" />
-    <state width="1899" height="272" key="GridCell.Tab.0.left" timestamp="1610411862278">
+    <state width="1899" height="272" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610419058455" />
+    <state width="1899" height="272" key="GridCell.Tab.0.left" timestamp="1610419058454">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="272" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610411862278" />
-    <state width="1899" height="272" key="GridCell.Tab.0.right" timestamp="1610411862278">
+    <state width="1899" height="272" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610419058454" />
+    <state width="1899" height="272" key="GridCell.Tab.0.right" timestamp="1610419058455">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="272" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610411862278" />
+    <state width="1899" height="272" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610419058455" />
     <state x="461" y="183" key="SettingsEditor" timestamp="1610396948261">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="183" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1610396948261" />
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1610407171813">
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1610411999520">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1610407171813" />
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1610411999520" />
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1610393208843">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

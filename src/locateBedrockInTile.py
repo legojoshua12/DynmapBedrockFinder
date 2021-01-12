@@ -8,6 +8,11 @@ def locateBedrockFirstTime(sample, bedrock, threshold=0.8, boxthickness = 2):
     template = cv.imread(bedrock)
     h, w = template.shape[:-1]
 
+    try:
+        img_rgb.shape[:-1]
+    except:
+        img_rgb = np.zeros((128,128,3), np.uint8)
+
     res = cv.matchTemplate(img_rgb, template, cv.TM_CCOEFF_NORMED)
     loc = np.where(res >= threshold)
     for pt in zip(*loc[::-1]):

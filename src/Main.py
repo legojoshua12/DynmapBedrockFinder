@@ -3,6 +3,7 @@
 import timeElapser
 import locateBedrockInTile
 import stitchtiles as st
+import fetchTiles as ft
 import cv2 as cv
 import json
 import os
@@ -16,11 +17,15 @@ dirname = dirname[:-4]
 sample = os.path.join(dirname, r'images\-')
 sample = sample.replace(os.sep, '/')
 
-bedrock = os.path.join(dirname, r'images\bedrock.jpg')
+bedrock = os.path.join(dirname, r'src\bedrock.jpg')
 bedrock = bedrock.replace(os.sep, '/')
 
 with open(dirname + "/src/config.json") as json_data_file:
     data = json.load(json_data_file)
+
+timeElapser.print_elapsed_time('Initialization:')
+ft.pullImages(data["dynmapSourceUrl"], data["vertical start"], data["vertical end"], data["horizontal start"], data["horizontal end"])
+timeElapser.print_elapsed_time('Download Images:')
 
 totalResult = None
 for i in range(data["horizontal start"], data["horizontal end"] + 1):
@@ -48,4 +53,9 @@ for i in range(data["horizontal start"], data["horizontal end"] + 1):
         totalResult = st.merge_columns(totalResult, result)
     cv.imwrite('export/result.png', totalResult)
 
-timeElapser.print_elapsed_time('Ending Script:')
+timeElapser.print_elapsed_time('Located Bedrock:')
+if data["removeLeftOverImages"]:
+    imagesLocation = os.path.join(dirname, r'images')
+    imagesLocation = imagesLocation.replace(os.sep, '/')
+    ft.emptyImages(imagesLocation)
+    timeElapser.print_elapsed_time('RemoveImages:')
