@@ -1,3 +1,8 @@
 {
-  "range": 7
+  "vertical start": 1,
+  "vertical end": 13,
+  "horizontal start": 4,
+  "horizontal end": 10,
+  "threshold": 0.95,
+  "boxthickness": 20
 }
