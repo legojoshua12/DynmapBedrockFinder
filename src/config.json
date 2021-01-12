@@ -2,8 +2,8 @@
   "vertical start": 0,
   "vertical end": 17,
   "horizontal start": 0,
-  "horizontal end": 15,
-  "threshold": 0.933,
+  "horizontal end": 17,
+  "threshold": 0.934,
   "boxthickness": 17,
   "dynmapSourceUrl": "http://localhost:8123/",
   "removeLeftOverImages": true

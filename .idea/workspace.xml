@@ -4,11 +4,8 @@
     <list default="true" id="f5d3494d-ccb4-40ea-ae3d-7bd09d1638a2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bedrock.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/bedrock.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fetchTiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fetchTiles.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/locateBedrockInTile.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/locateBedrockInTile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stitchtiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/stitchtiles.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610419413052</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Master final result is rendered of the whole map resulting in a correct finder and locator of trade goods">
+      <created>1610437304776</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610437304776</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -129,41 +133,42 @@
     <MESSAGE value="Refactored code into correct order stitching into columns using length of config file, as well as added a new time elapse function for monitoring length of calculation" />
     <MESSAGE value="Multi column work done and correct image stitching is made throughout the final result, correctly locating the bedrock" />
     <MESSAGE value="Dynamic framing added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dynamic framing added" />
+    <MESSAGE value="Master final result is rendered of the whole map resulting in a correct finder and locator of trade goods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Master final result is rendered of the whole map resulting in a correct finder and locator of trade goods" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610393017999">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1610393017999" />
-    <state x="430" y="49" key="CommitChangelistDialog2" timestamp="1610419412640">
+    <state x="430" y="49" key="CommitChangelistDialog2" timestamp="1610437304360">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="430" y="49" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1610419412640" />
-    <state width="1899" height="272" key="GridCell.Tab.0.bottom" timestamp="1610437183008">
+    <state x="430" y="49" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1610437304360" />
+    <state width="1899" height="272" key="GridCell.Tab.0.bottom" timestamp="1610444589731">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610437183008" />
-    <state width="1899" height="272" key="GridCell.Tab.0.center" timestamp="1610437183008">
+    <state width="1899" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610444589731" />
+    <state width="1899" height="272" key="GridCell.Tab.0.center" timestamp="1610444589730">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="272" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610437183008" />
-    <state width="1899" height="272" key="GridCell.Tab.0.left" timestamp="1610437183008">
+    <state width="1899" height="272" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610444589730" />
+    <state width="1899" height="272" key="GridCell.Tab.0.left" timestamp="1610444589730">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="272" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610437183008" />
-    <state width="1899" height="272" key="GridCell.Tab.0.right" timestamp="1610437183008">
+    <state width="1899" height="272" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610444589730" />
+    <state width="1899" height="272" key="GridCell.Tab.0.right" timestamp="1610444589730">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="272" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610437183008" />
+    <state width="1899" height="272" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610444589730" />
     <state x="461" y="183" key="SettingsEditor" timestamp="1610396948261">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="183" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1610396948261" />
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1610419414660">
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1610437306110">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1610419414660" />
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1610437306110" />
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1610393208843">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

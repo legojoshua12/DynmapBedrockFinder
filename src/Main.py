@@ -20,6 +20,12 @@ sample = sample.replace(os.sep, '/')
 bedrock = os.path.join(dirname, r'src\bedrock.jpg')
 bedrock = bedrock.replace(os.sep, '/')
 
+bedrock2 = os.path.join(dirname, r'src\bedrock2.jpg')
+bedrock2 = bedrock2.replace(os.sep, '/')
+
+bedrock3 = os.path.join(dirname, r'src\bedrock3.jpg')
+bedrock3 = bedrock3.replace(os.sep, '/')
+
 with open(dirname + "/src/config.json") as json_data_file:
     data = json.load(json_data_file)
 
@@ -39,10 +45,10 @@ def NegativeNegative():
         for j in range(data["vertical start"], data["vertical end"] + 1):
             sample = sample + '/-' + str(i) + '_-' + str(j) + ".jpg"
             if result is None:
-                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrock, data["threshold"],
+                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrock, bedrock2, bedrock3, data["threshold"],
                                                                     data["boxthickness"])
             else:
-                result = locateBedrockInTile.locateBedrock(result, sample, bedrock, data["threshold"],
+                result = locateBedrockInTile.locateBedrock(result, sample, bedrock, bedrock2, bedrock3, data["threshold"],
                                                            data["boxthickness"])
 
             # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
@@ -76,10 +82,10 @@ def PositiveNegative():
         for j in range(data["vertical start"], data["vertical end"] + 1):
             sample = sample + '/' + str(i) + '_-' + str(j) + ".jpg"
             if result is None:
-                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrock, data["threshold"],
+                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrock, bedrock2, bedrock3, data["threshold"],
                                                                     data["boxthickness"])
             else:
-                result = locateBedrockInTile.locateBedrock(result, sample, bedrock, data["threshold"],
+                result = locateBedrockInTile.locateBedrock(result, sample, bedrock, bedrock2, bedrock3, data["threshold"],
                                                            data["boxthickness"])
 
             # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
@@ -112,10 +118,10 @@ def NegativePositive():
         for j in range(data["vertical start"], data["vertical end"] + 1):
             sample = sample + '/-' + str(i) + '_' + str(j) + ".jpg"
             if result is None:
-                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrock, data["threshold"],
+                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrock, bedrock2, bedrock3, data["threshold"],
                                                                     data["boxthickness"])
             else:
-                result = locateBedrockInTile.locateBedrock(result, sample, bedrock, data["threshold"],
+                result = locateBedrockInTile.locateBedrock(result, sample, bedrock, bedrock2, bedrock3, data["threshold"],
                                                            data["boxthickness"], True)
 
             # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
@@ -148,10 +154,10 @@ def PositivePositive():
         for j in range(data["vertical start"], data["vertical end"] + 1):
             sample = sample + '/' + str(i) + '_' + str(j) + ".jpg"
             if result is None:
-                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrock, data["threshold"],
+                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrock, bedrock2, bedrock3, data["threshold"],
                                                                     data["boxthickness"])
             else:
-                result = locateBedrockInTile.locateBedrock(result, sample, bedrock, data["threshold"],
+                result = locateBedrockInTile.locateBedrock(result, sample, bedrock, bedrock2, bedrock3, data["threshold"],
                                                            data["boxthickness"], True)
 
             # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
