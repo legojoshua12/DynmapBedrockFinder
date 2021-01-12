@@ -1,10 +1,10 @@
 {
-  "vertical start": 1,
-  "vertical end": 14,
-  "horizontal start": 1,
-  "horizontal end": 16,
-  "threshold": 0.92,
-  "boxthickness": 10,
+  "vertical start": 0,
+  "vertical end": 17,
+  "horizontal start": 0,
+  "horizontal end": 15,
+  "threshold": 0.933,
+  "boxthickness": 17,
   "dynmapSourceUrl": "http://localhost:8123/",
   "removeLeftOverImages": true
 }

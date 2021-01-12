@@ -3,11 +3,11 @@ import shutil
 import os
 
 
-def pullImages(sourceurl, startv, endv, starth, endh):
-    sourceurl = sourceurl + "tiles/world/flat/-1_-1/"
-    for i in range(startv, endv):
-        for j in range(starth, endh):
-            pullurl = sourceurl + "-" + str(j) + "_-" + str(i) + ".jpg"
+def pullImages(sourceurl, startv, endv, starth, endh, longStringIdentifier, index, underscore):
+    sourceurl = sourceurl + longStringIdentifier
+    for i in range(startv, endv+1):
+        for j in range(starth, endh+1):
+            pullurl = sourceurl + index + str(j) + underscore + str(i) + ".jpg"
             filename = pullurl.split("/")[-1]
 
             r = requests.get(pullurl, stream=True)
