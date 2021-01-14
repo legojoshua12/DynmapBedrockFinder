@@ -6,5 +6,6 @@
   "threshold": 0.934,
   "boxthickness": 17,
   "dynmapSourceUrl": "http://localhost:8123/",
-  "removeLeftOverImages": true
+  "removeLeftOverImages": true,
+  "bedrockSampleImageCount": 5
 }

@@ -7,6 +7,7 @@ import fetchTiles as ft
 import cv2 as cv
 import json
 import os
+import threading as thread
 
 print('Starting script')
 timeElapser.print_elapsed_time()
@@ -17,17 +18,15 @@ dirname = dirname[:-4]
 sample = os.path.join(dirname, r'images')
 sample = sample.replace(os.sep, '/')
 
-bedrock = os.path.join(dirname, r'src\bedrock.jpg')
+bedrock = os.path.join(dirname, r'src\bedrockSourceImages\bedrock')
 bedrock = bedrock.replace(os.sep, '/')
-
-bedrock2 = os.path.join(dirname, r'src\bedrock2.jpg')
-bedrock2 = bedrock2.replace(os.sep, '/')
-
-bedrock3 = os.path.join(dirname, r'src\bedrock3.jpg')
-bedrock3 = bedrock3.replace(os.sep, '/')
 
 with open(dirname + "/src/config.json") as json_data_file:
     data = json.load(json_data_file)
+
+bedrockArray = []
+for i in range(data["bedrockSampleImageCount"]):
+    bedrockArray.append(bedrock)
 
 timeElapser.print_elapsed_time('Initialization:')
 
@@ -35,7 +34,7 @@ timeElapser.print_elapsed_time('Initialization:')
 def NegativeNegative():
     print("Running Negative, Negative Tiles Compute")
     global sample
-    global bedrock
+    global bedrockArray
     ft.pullImages(data["dynmapSourceUrl"], data["vertical start"], data["vertical end"], data["horizontal start"],
                   data["horizontal end"], 'tiles/world/flat/-1_-1/', '-', '_-')
     timeElapser.print_elapsed_time('Download Images:')
@@ -45,10 +44,10 @@ def NegativeNegative():
         for j in range(data["vertical start"], data["vertical end"] + 1):
             sample = sample + '/-' + str(i) + '_-' + str(j) + ".jpg"
             if result is None:
-                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrock, bedrock2, bedrock3, data["threshold"],
+                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrockArray, data["threshold"],
                                                                     data["boxthickness"])
             else:
-                result = locateBedrockInTile.locateBedrock(result, sample, bedrock, bedrock2, bedrock3, data["threshold"],
+                result = locateBedrockInTile.locateBedrock(result, sample, bedrockArray, data["threshold"],
                                                            data["boxthickness"])
 
             # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
@@ -72,7 +71,7 @@ def NegativeNegative():
 def PositiveNegative():
     print("Running Positive, Negative Tiles Compute")
     global sample
-    global bedrock
+    global bedrockArray
     ft.pullImages(data["dynmapSourceUrl"], data["vertical start"], data["vertical end"], data["horizontal start"],
                   data["horizontal end"], 'tiles/world/flat/0_-1/', '', '_-')
     timeElapser.print_elapsed_time('Download Images:')
@@ -82,10 +81,10 @@ def PositiveNegative():
         for j in range(data["vertical start"], data["vertical end"] + 1):
             sample = sample + '/' + str(i) + '_-' + str(j) + ".jpg"
             if result is None:
-                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrock, bedrock2, bedrock3, data["threshold"],
+                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrockArray, data["threshold"],
                                                                     data["boxthickness"])
             else:
-                result = locateBedrockInTile.locateBedrock(result, sample, bedrock, bedrock2, bedrock3, data["threshold"],
+                result = locateBedrockInTile.locateBedrock(result, sample, bedrockArray, data["threshold"],
                                                            data["boxthickness"])
 
             # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
@@ -109,7 +108,7 @@ def PositiveNegative():
 def NegativePositive():
     print("Running Negative, Positive Tiles Compute")
     global sample
-    global bedrock
+    global bedrockArray
     ft.pullImages(data["dynmapSourceUrl"], data["vertical start"], data["vertical end"], data["horizontal start"], data["horizontal end"], 'tiles/world/flat/-1_0/', '-', '_')
     timeElapser.print_elapsed_time('Download Images:')
     totalResult = None
@@ -118,10 +117,10 @@ def NegativePositive():
         for j in range(data["vertical start"], data["vertical end"] + 1):
             sample = sample + '/-' + str(i) + '_' + str(j) + ".jpg"
             if result is None:
-                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrock, bedrock2, bedrock3, data["threshold"],
+                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrockArray, data["threshold"],
                                                                     data["boxthickness"])
             else:
-                result = locateBedrockInTile.locateBedrock(result, sample, bedrock, bedrock2, bedrock3, data["threshold"],
+                result = locateBedrockInTile.locateBedrock(result, sample, bedrockArray, data["threshold"],
                                                            data["boxthickness"], True)
 
             # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
@@ -145,7 +144,7 @@ def NegativePositive():
 def PositivePositive():
     print("Running Positive, Positive Tiles Compute")
     global sample
-    global bedrock
+    global bedrockArray
     ft.pullImages(data["dynmapSourceUrl"], data["vertical start"], data["vertical end"], data["horizontal start"], data["horizontal end"], 'tiles/world/flat/-1_0/', '', '_')
     timeElapser.print_elapsed_time('Download Images:')
     totalResult = None
@@ -154,10 +153,10 @@ def PositivePositive():
         for j in range(data["vertical start"], data["vertical end"] + 1):
             sample = sample + '/' + str(i) + '_' + str(j) + ".jpg"
             if result is None:
-                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrock, bedrock2, bedrock3, data["threshold"],
+                result = locateBedrockInTile.locateBedrockFirstTime(sample, bedrockArray, data["threshold"],
                                                                     data["boxthickness"])
             else:
-                result = locateBedrockInTile.locateBedrock(result, sample, bedrock, bedrock2, bedrock3, data["threshold"],
+                result = locateBedrockInTile.locateBedrock(result, sample, bedrockArray, data["threshold"],
                                                            data["boxthickness"], True)
 
             # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
@@ -178,10 +177,20 @@ def PositivePositive():
     timeElapser.print_elapsed_time('Located Bedrock:')
 
 
-NegativeNegative()
-PositiveNegative()
-NegativePositive()
-PositivePositive()
+t1 = thread.Thread(NegativeNegative())
+t2 = thread.Thread(PositiveNegative())
+t3 = thread.Thread(NegativePositive())
+t4 = thread.Thread(PositivePositive())
+
+t1.start()
+t2.start()
+t3.start()
+t4.start()
+
+t1.join()
+t2.join()
+t3.join()
+t4.join()
 
 result = os.path.join(dirname, r'export\result.png')
 result = result.replace(os.sep, '/')
