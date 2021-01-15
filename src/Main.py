@@ -53,12 +53,18 @@ def NegativeNegative():
             # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
             if j <= 9 and i <= 9:
                 sample = sample[:-10]
-            elif j <= 9 and i >= 10:
+            elif j <= 9 and 10 <= i < 100:
                 sample = sample[:-11]
-            elif j >= 10 and i <= 9:
+            elif 10 <= j < 100 and i <= 9:
                 sample = sample[:-11]
-            elif j >= 10 and i >= 10:
+            elif 10 <= j < 100 and 10 <= i < 100:
                 sample = sample[:-12]
+            elif i >= 100 and j < 100:
+                sample = sample[:-13]
+            elif i < 100 and j >= 100:
+                sample = sample[:-13]
+            elif i >= 100 and j >= 100:
+                sample = sample[:-14]
 
         if totalResult is None:
             totalResult = result
@@ -90,12 +96,18 @@ def PositiveNegative():
             # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
             if j <= 9 and i <= 9:
                 sample = sample[:-9]
-            elif j <= 9 and i >= 10:
+            elif j <= 9 and 10 <= i < 100:
                 sample = sample[:-10]
-            elif j >= 10 and i <= 9:
+            elif 10 <= j < 100 and i <= 9:
                 sample = sample[:-10]
-            elif j >= 10 and i >= 10:
+            elif 10 <= j < 100 and 10 <= i < 100:
                 sample = sample[:-11]
+            elif i >= 100 and j < 100:
+                sample = sample[:-12]
+            elif i < 100 and j >= 100:
+                sample = sample[:-12]
+            elif i >= 100 and j >= 100:
+                sample = sample[:-13]
 
         if totalResult is None:
             totalResult = result
@@ -126,12 +138,18 @@ def NegativePositive():
             # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
             if j <= 9 and i <= 9:
                 sample = sample[:-9]
-            elif j <= 9 and i >= 10:
+            elif j <= 9 and 10 <= i < 100:
                 sample = sample[:-10]
-            elif j >= 10 and i <= 9:
+            elif 10 <= j < 100 and i <= 9:
                 sample = sample[:-10]
-            elif j >= 10 and i >= 10:
+            elif 10 <= j < 100 and 10 <= i < 100:
                 sample = sample[:-11]
+            elif i >= 100 and j < 100:
+                sample = sample[:-12]
+            elif i < 100 and j >= 100:
+                sample = sample[:-12]
+            elif i >= 100 and j >= 100:
+                sample = sample[:-13]
 
         if totalResult is None:
             totalResult = result
@@ -162,12 +180,18 @@ def PositivePositive():
             # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
             if j <= 9 and i <= 9:
                 sample = sample[:-8]
-            elif j <= 9 and i >= 10:
+            elif j <= 9 and 10 <= i < 100:
                 sample = sample[:-9]
-            elif j >= 10 and i <= 9:
+            elif 10 <= j < 100 and i <= 9:
                 sample = sample[:-9]
-            elif j >= 10 and i >= 10:
+            elif 10 <= j < 100 and 10 <= i < 100:
                 sample = sample[:-10]
+            elif i >= 100 and j < 100:
+                sample = sample[:-11]
+            elif i < 100 and j >= 100:
+                sample = sample[:-11]
+            elif i >= 100 and j >= 100:
+                sample = sample[:-12]
 
         if totalResult is None:
             totalResult = result

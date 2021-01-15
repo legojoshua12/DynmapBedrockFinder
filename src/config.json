@@ -1,11 +1,11 @@
 {
   "vertical start": 0,
-  "vertical end": 17,
+  "vertical end": 140,
   "horizontal start": 0,
-  "horizontal end": 17,
+  "horizontal end": 140,
   "threshold": 0.934,
-  "boxthickness": 17,
-  "dynmapSourceUrl": "http://localhost:8123/",
+  "boxthickness": 17000,
+  "dynmapSourceUrl": "https://empress.hexa-network.net/",
   "removeLeftOverImages": true,
   "bedrockSampleImageCount": 5
 }

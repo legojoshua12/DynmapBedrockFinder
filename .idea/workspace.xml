@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f5d3494d-ccb4-40ea-ae3d-7bd09d1638a2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bedrock.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/bedrockSourceImages/bedrock1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/locateBedrockInTile.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/locateBedrockInTile.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610444888968</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Dynamic bedrock count of source images now configurable in the config file">
+      <created>1610596819182</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610596819182</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -144,44 +150,49 @@
     <MESSAGE value="Dynamic framing added" />
     <MESSAGE value="Master final result is rendered of the whole map resulting in a correct finder and locator of trade goods" />
     <MESSAGE value="Added more successive rendering for more accurate finding of bedrock pillars, needs a couple more source images for example one for a white background and one for shallow waters" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more successive rendering for more accurate finding of bedrock pillars, needs a couple more source images for example one for a white background and one for shallow waters" />
+    <MESSAGE value="Dynamic bedrock count of source images now configurable in the config file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dynamic bedrock count of source images now configurable in the config file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610393017999">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="196" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1610393017999" />
-    <state x="430" y="49" key="CommitChangelistDialog2" timestamp="1610444888601">
+    <state x="360" y="49" key="CommitChangelistDialog2" timestamp="1610596818672">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="430" y="49" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1610444888601" />
-    <state width="1899" height="272" key="GridCell.Tab.0.bottom" timestamp="1610596695226">
+    <state x="360" y="49" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1610596818672" />
+    <state width="1899" height="272" key="GridCell.Tab.0.bottom" timestamp="1610700179606">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610596695226" />
-    <state width="1899" height="272" key="GridCell.Tab.0.center" timestamp="1610596695224">
+    <state width="1899" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1610700179606" />
+    <state width="1899" height="272" key="GridCell.Tab.0.center" timestamp="1610700179606">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="272" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610596695224" />
-    <state width="1899" height="272" key="GridCell.Tab.0.left" timestamp="1610596695223">
+    <state width="1899" height="272" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1610700179606" />
+    <state width="1899" height="272" key="GridCell.Tab.0.left" timestamp="1610700179606">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="272" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610596695223" />
-    <state width="1899" height="272" key="GridCell.Tab.0.right" timestamp="1610596695225">
+    <state width="1899" height="272" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1610700179606" />
+    <state width="1899" height="272" key="GridCell.Tab.0.right" timestamp="1610700179606">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="272" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610596695225" />
+    <state width="1899" height="272" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1610700179606" />
     <state x="461" y="183" key="SettingsEditor" timestamp="1610396948261">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="183" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1610396948261" />
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1610444890105">
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1610596820691">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1610444890105" />
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1610596820691" />
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1610393208843">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1610393208843" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1610699623502">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1610699623502" />
   </component>
 </project>
