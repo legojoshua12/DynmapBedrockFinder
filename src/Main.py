@@ -49,22 +49,7 @@ def NegativeNegative():
             else:
                 result = locateBedrockInTile.locateBedrock(result, sample, bedrockArray, data["threshold"],
                                                            data["boxthickness"])
-
-            # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
-            if j <= 9 and i <= 9:
-                sample = sample[:-10]
-            elif j <= 9 and 10 <= i < 100:
-                sample = sample[:-11]
-            elif 10 <= j < 100 and i <= 9:
-                sample = sample[:-11]
-            elif 10 <= j < 100 and 10 <= i < 100:
-                sample = sample[:-12]
-            elif i >= 100 and j < 100:
-                sample = sample[:-13]
-            elif i < 100 and j >= 100:
-                sample = sample[:-13]
-            elif i >= 100 and j >= 100:
-                sample = sample[:-14]
+            sample = sample[:-((len(str(i))) + 8 + (len(str(j))))]
 
         if totalResult is None:
             totalResult = result
@@ -92,22 +77,7 @@ def PositiveNegative():
             else:
                 result = locateBedrockInTile.locateBedrock(result, sample, bedrockArray, data["threshold"],
                                                            data["boxthickness"])
-
-            # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
-            if j <= 9 and i <= 9:
-                sample = sample[:-9]
-            elif j <= 9 and 10 <= i < 100:
-                sample = sample[:-10]
-            elif 10 <= j < 100 and i <= 9:
-                sample = sample[:-10]
-            elif 10 <= j < 100 and 10 <= i < 100:
-                sample = sample[:-11]
-            elif i >= 100 and j < 100:
-                sample = sample[:-12]
-            elif i < 100 and j >= 100:
-                sample = sample[:-12]
-            elif i >= 100 and j >= 100:
-                sample = sample[:-13]
+            sample = sample[:-((len(str(i))) + 7 + (len(str(j))))]
 
         if totalResult is None:
             totalResult = result
@@ -121,7 +91,8 @@ def NegativePositive():
     print("Running Negative, Positive Tiles Compute")
     global sample
     global bedrockArray
-    ft.pullImages(data["dynmapSourceUrl"], data["vertical start"], data["vertical end"], data["horizontal start"], data["horizontal end"], 'tiles/world/flat/-1_0/', '-', '_')
+    ft.pullImages(data["dynmapSourceUrl"], data["vertical start"], data["vertical end"], data["horizontal start"],
+                  data["horizontal end"], 'tiles/world/flat/-1_0/', '-', '_')
     timeElapser.print_elapsed_time('Download Images:')
     totalResult = None
     for i in range(data["horizontal start"], data["horizontal end"] + 1):
@@ -134,22 +105,7 @@ def NegativePositive():
             else:
                 result = locateBedrockInTile.locateBedrock(result, sample, bedrockArray, data["threshold"],
                                                            data["boxthickness"], True)
-
-            # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
-            if j <= 9 and i <= 9:
-                sample = sample[:-9]
-            elif j <= 9 and 10 <= i < 100:
-                sample = sample[:-10]
-            elif 10 <= j < 100 and i <= 9:
-                sample = sample[:-10]
-            elif 10 <= j < 100 and 10 <= i < 100:
-                sample = sample[:-11]
-            elif i >= 100 and j < 100:
-                sample = sample[:-12]
-            elif i < 100 and j >= 100:
-                sample = sample[:-12]
-            elif i >= 100 and j >= 100:
-                sample = sample[:-13]
+            sample = sample[:-((len(str(i))) + 7 + (len(str(j))))]
 
         if totalResult is None:
             totalResult = result
@@ -163,7 +119,8 @@ def PositivePositive():
     print("Running Positive, Positive Tiles Compute")
     global sample
     global bedrockArray
-    ft.pullImages(data["dynmapSourceUrl"], data["vertical start"], data["vertical end"], data["horizontal start"], data["horizontal end"], 'tiles/world/flat/-1_0/', '', '_')
+    ft.pullImages(data["dynmapSourceUrl"], data["vertical start"], data["vertical end"], data["horizontal start"],
+                  data["horizontal end"], 'tiles/world/flat/-1_0/', '', '_')
     timeElapser.print_elapsed_time('Download Images:')
     totalResult = None
     for i in range(data["horizontal start"], data["horizontal end"] + 1):
@@ -176,22 +133,7 @@ def PositivePositive():
             else:
                 result = locateBedrockInTile.locateBedrock(result, sample, bedrockArray, data["threshold"],
                                                            data["boxthickness"], True)
-
-            # TODO: This needs fixing, just a hacky way for now within double digits of tile names, need to come up with a better method later
-            if j <= 9 and i <= 9:
-                sample = sample[:-8]
-            elif j <= 9 and 10 <= i < 100:
-                sample = sample[:-9]
-            elif 10 <= j < 100 and i <= 9:
-                sample = sample[:-9]
-            elif 10 <= j < 100 and 10 <= i < 100:
-                sample = sample[:-10]
-            elif i >= 100 and j < 100:
-                sample = sample[:-11]
-            elif i < 100 and j >= 100:
-                sample = sample[:-11]
-            elif i >= 100 and j >= 100:
-                sample = sample[:-12]
+            sample = sample[:-((len(str(i))) + 6 + (len(str(j))))]
 
         if totalResult is None:
             totalResult = result

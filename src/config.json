@@ -6,6 +6,6 @@
   "threshold": 0.934,
   "boxthickness": 17000,
   "dynmapSourceUrl": "https://empress.hexa-network.net/",
-  "removeLeftOverImages": true,
+  "removeLeftOverImages": false,
   "bedrockSampleImageCount": 5
 }
