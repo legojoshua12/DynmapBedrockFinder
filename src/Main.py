@@ -142,21 +142,21 @@ def PositivePositive():
         cv.imwrite('export/result4.png', totalResult)
     timeElapser.print_elapsed_time('Located Bedrock:')
 
-
-t1 = thread.Thread(NegativeNegative())
-t2 = thread.Thread(PositiveNegative())
-t3 = thread.Thread(NegativePositive())
-t4 = thread.Thread(PositivePositive())
-
-t1.start()
-t2.start()
-t3.start()
-t4.start()
-
-t1.join()
-t2.join()
-t3.join()
-t4.join()
+if data["unqiueRender"] == 0:
+    NegativeNegative()
+    PositiveNegative()
+    NegativePositive()
+    PositivePositive()
+elif data["unqiueRender"] == 1:
+    NegativeNegative()
+elif data["unqiueRender"] == 2:
+    PositiveNegative()
+elif data["unqiueRender"] == 3:
+    NegativePositive()
+elif data["unqiueRender"] == 4:
+    PositivePositive()
+else:
+    print("Invalid number specified")
 
 result = os.path.join(dirname, r'export\result.png')
 result = result.replace(os.sep, '/')
@@ -166,7 +166,9 @@ result3 = os.path.join(dirname, r'export\result3.png')
 result3 = result3.replace(os.sep, '/')
 result4 = os.path.join(dirname, r'export\result4.png')
 result4 = result4.replace(os.sep, '/')
-cv.imwrite('export/finalresult.png', st.stitchQuadrants(result, result2, result3, result4))
+
+if data["stitchFinalRender"] and data["unqiueRender"] == 0:
+    cv.imwrite('export/finalresult.png', st.stitchQuadrants(result, result2, result3, result4))
 
 if data["removeLeftOverImages"]:
     imagesLocation = os.path.join(dirname, r'images')
